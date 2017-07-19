@@ -15,16 +15,14 @@ public class ColorsActivity extends AppCompatActivity {
 
         // Create a list of words
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("blue", "син"));
-        words.add(new Word("red", "червен"));
-        words.add(new Word("gray", "сив"));
-        words.add(new Word("black", "син"));
-        words.add(new Word("white", "бюл"));
-        words.add(new Word("yellow", "жълт"));
-        words.add(new Word("purple", "пурпурен"));
-        words.add(new Word("green", "зелен"));
-        words.add(new Word("brown", "кафяв"));
-        words.add(new Word("orange", "оранжев"));
+        words.add(new Word("dusty yellow", "мръсно-жълт", R.drawable.color_dusty_yellow));
+        words.add(new Word("red", "червен", R.drawable.color_red));
+        words.add(new Word("gray", "сив", R.drawable.color_gray));
+        words.add(new Word("black", "черен", R.drawable.color_black));
+        words.add(new Word("white", "бюл", R.drawable.color_white));
+        words.add(new Word("yellow", "жълт", R.drawable.color_mustard_yellow));
+        words.add(new Word("green", "зелен", R.drawable.color_green));
+        words.add(new Word("brown", "кафяв", R.drawable.color_brown));
 
         WordAdapter itemsAdapter = new WordAdapter(this, words);
 

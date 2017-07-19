@@ -15,16 +15,16 @@ public class NumbersActivity extends AppCompatActivity {
 
         // Create a list of words
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("one", "едно"));
-        words.add(new Word("two", "две"));
-        words.add(new Word("three", "три"));
-        words.add(new Word("foor", "четири"));
-        words.add(new Word("five", "пет"));
-        words.add(new Word("six", "шест"));
-        words.add(new Word("seven", "седем"));
-        words.add(new Word("eight", "осем"));
-        words.add(new Word("nine", "девет"));
-        words.add(new Word("ten", "десет"));
+        words.add(new Word("one", "едно", R.drawable.number_one));
+        words.add(new Word("two", "две", R.drawable.number_two));
+        words.add(new Word("three", "три", R.drawable.number_three));
+        words.add(new Word("foor", "четири", R.drawable.number_four));
+        words.add(new Word("five", "пет", R.drawable.number_five));
+        words.add(new Word("six", "шест", R.drawable.number_six));
+        words.add(new Word("seven", "седем", R.drawable.number_seven));
+        words.add(new Word("eight", "осем", R.drawable.number_eight));
+        words.add(new Word("nine", "девет", R.drawable.number_nine));
+        words.add(new Word("ten", "десет", R.drawable.number_ten));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
