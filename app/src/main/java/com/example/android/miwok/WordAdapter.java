@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +25,11 @@ public class WordAdapter extends ArrayAdapter<Word> {
         ImageView imageView;
     }
 
-    public WordAdapter(@NonNull Context context, @NonNull List<Word> objects) {
+    private int mBackgroundColorResourceId;
+
+    public WordAdapter(@NonNull Context context, @NonNull List<Word> objects, int backgroundColorResourceId) {
         super(context, 0, objects);
+        this.mBackgroundColorResourceId = backgroundColorResourceId;
     }
 
     @NonNull
@@ -40,7 +44,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
 
-
             convertView = inflater.inflate(R.layout.list_item, parent, false);
             viewHolder.miwokView = (TextView) convertView.findViewById(R.id.miwok_text_view);
             viewHolder.defaultView = (TextView) convertView.findViewById(R.id.default_text_view);
@@ -48,6 +51,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
             // Cache the viewHolder object inside the fresh view
             convertView.setTag(viewHolder);
+
+            int bgColor = ContextCompat.getColor(getContext(), mBackgroundColorResourceId);
+            View textContainer = convertView.findViewById(R.id.text_container);
+            textContainer.setBackgroundColor(bgColor);
 
         } else {
             // View is being recycled, retrieve the viewHolder object from tag
